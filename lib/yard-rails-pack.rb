@@ -15,4 +15,4 @@ require 'yard-rails-pack/devise'
 require 'yard-rails-pack/alfreds'
 require 'yard-rails-pack/rspec'
 
-YardRailsPack::Routes.process
+#YardRailsPack::Routes.process
