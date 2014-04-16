@@ -1,4 +1,7 @@
 class RSpec::DescribeHandler < YARD::Handlers::Ruby::Base
+
+  ### DSL methods to handle
+
   handles method_call(:describe)
 
   def process
@@ -12,4 +15,5 @@ class RSpec::DescribeHandler < YARD::Handlers::Ruby::Base
     parse_block(statement.last.last, owner: obj)
   rescue YARD::Handlers::NamespaceMissingError
   end
+
 end

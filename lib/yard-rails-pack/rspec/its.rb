@@ -1,4 +1,7 @@
 class RSpec::ItHandler < YARD::Handlers::Ruby::Base
+
+  ### DSL methods to handle
+
   handles method_call(:it)
 
   def process
@@ -13,4 +16,5 @@ class RSpec::ItHandler < YARD::Handlers::Ruby::Base
       :source => statement.source.chomp
     }
   end
+
 end
