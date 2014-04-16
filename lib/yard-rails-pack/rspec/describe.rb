@@ -1,4 +1,4 @@
-class RSpec::DescribeHandler < YARD::Handlers::Ruby::Base
+class Rspec::DescribeHandler < YARD::Handlers::Ruby::Base
 
   ### DSL methods to handle
 

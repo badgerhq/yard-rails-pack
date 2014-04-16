@@ -1,4 +1,4 @@
-class RSpec::ItHandler < YARD::Handlers::Ruby::Base
+class Rspec::ItHandler < YARD::Handlers::Ruby::Base
 
   ### DSL methods to handle
 
