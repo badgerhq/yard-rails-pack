@@ -12,7 +12,6 @@ module YardRailsPack
         @body     = "# #{application_name} Routes\n\n```\n#{application_name}\n\n"
         @body     << inspector.format(ActionDispatch::Routing::ConsoleFormatter.new, ENV['CONTROLLER'])
         @body     << "\n```"
-        p @body
 
         save!
       end
