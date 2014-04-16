@@ -1,0 +1,6 @@
+<% if object[:nested_attributes] %>
+<h2>Nested attributes</h2>
+<div class="docstring"><div class="discussion">
+<pre class="code ruby"><code class="ruby"><%= html_syntax_highlight(object[:nested_attributes].join("\n")) %></code></pre>
+</div></div>
+<% end %>
