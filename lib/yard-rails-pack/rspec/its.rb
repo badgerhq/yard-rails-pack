@@ -9,8 +9,11 @@ class Rspec::ItHandler < YARD::Handlers::Ruby::Base
     object = P(owner[:spec])
     return if object.is_a?(Proxy)
 
+    context = owner[:context]
+    name    = (context || []) << statement.parameters.first.jump(:string_content).source
+
     (object[:specifications] ||= []) << {
-      :name   => statement.parameters.first.jump(:string_content).source,
+      :name   => name.join(' '),
       :file   => statement.file,
       :line   => statement.line,
       :source => statement.source.chomp
