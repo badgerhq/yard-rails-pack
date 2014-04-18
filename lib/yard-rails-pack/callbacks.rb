@@ -3,9 +3,6 @@ class CallbacksHandler < YardRailsPack::Base
   ### DSL methods to handle
 
   [
-    :before,
-    :after,
-
     :before_save,
     :after_save,
 

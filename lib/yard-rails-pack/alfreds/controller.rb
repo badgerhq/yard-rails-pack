@@ -9,6 +9,7 @@ class Alfreds::ControllerHandler < YardRailsPack::Base
     name   = statement.parameters.first.jump(:string_content).source
 
     parse_block(source, :owner => { :namespace => name })
+  rescue
   end
 
 end
