@@ -22,6 +22,8 @@ Adds handlers for the following Rails behaviour:
 Adds handlers for the following gems:
 - Alfred (https://github.com/jhnvz/alfred)
 - RSpec (https://github.com/rspec/rspec)
+- Devise (https://github.com/platformatec/devise)
+- Has scope (https://github.com/?/has_scope
 
 ## Installation
 
