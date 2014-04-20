@@ -28,7 +28,7 @@ Adds handlers for the following gems:
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'yard-rails-pack'
+gem 'yard-rails-pack', :group => 'development', :require => false
 ```
 
 And then execute:
