@@ -3,6 +3,9 @@ class ControllerFilterHandler < YardRailsPack::Base
   ### DSL methods to handle
 
   [
+    :skip_before_filter,
+    :skip_after_filter,
+    :skip_around_filter,
     :before_filter,
     :after_filer,
     :around_filter,

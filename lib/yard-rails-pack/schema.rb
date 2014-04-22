@@ -44,6 +44,8 @@ class SchemaHandler < YardRailsPack::Base
     namespace.attributes[scope][column] ||= SymbolHash[:read => nil, :write => nil]
 
     { :read => column, :write => "#{column}=" }.each do |type, meth|
+      next unless P("#{namespace}##{meth}").is_a?(Proxy) # already documented
+
       o = MethodObject.new(namespace, meth, scope)
       if type == :write
         o.parameters = [['value', nil]]
@@ -51,9 +53,9 @@ class SchemaHandler < YardRailsPack::Base
         full_src     = "#{src}\n  @#{column} = value\nend"
         doc          = "Sets the attribute #{column}\n@param value the value to set the attribute #{column} to."
       else
-        src      = "def #{meth}"
-        full_src = "#{src}\n  @#{column}\nend"
-        doc      = "Returns the value of attribute #{column}"
+        src          = "def #{meth}"
+        full_src     = "#{src}\n  @#{column}\nend"
+        doc          = "Returns the value of attribute #{column}"
       end
       o.add_tag(YARD::Tags::Tag.new(:return, "Returns the value of attribute #{column}", klass))
       o.source ||= full_src
