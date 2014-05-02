@@ -55,9 +55,8 @@ class SchemaHandler < YardRailsPack::Base
       else
         src          = "def #{meth}"
         full_src     = "#{src}\n  @#{column}\nend"
-        doc          = "Returns the value of attribute #{column}"
       end
-      o.add_tag(YARD::Tags::Tag.new(:return, "Returns the value of attribute #{column}", klass))
+      o.add_tag(YARD::Tags::Tag.new(:return, nil, klass))
       o.source ||= full_src
       o.signature ||= src
       register(o)
